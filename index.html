@@ -4,112 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
-        <form action="">
-            <input type="text" name="" id="">
-            <button>
-                <img src="./img/search.jpg" alt="">
-            </button>
-        </form>
+    <header class="align-content">
+        <div class="align-content">
+            <form action="">
+                <input type="text" name="" id="">
+                <button>
+                    <img src="./img/search.jpg" alt="">
+                </button>
+            </form>
+        </div>
     </header>
 
-    <main>
-        <section id="main-info">
-            <div>
-                <p class="temp-today">0</p>
-                <div class="container-img">
-                    <img src="" alt="" class="icon-today-temp">
+    <main class="">
+        <div class="align-content">
+            <section id="main-info" class="col-1">
+                <div>
+                    <p class="temp-today">20°</p>
+                    <div class="container-img">
+                        <img src="./assets/img/storm.png" alt="icon-temp" class="icon-today-temp">
+                    </div>
                 </div>
-            </div>
-            <h1 class="name-city"></h1>
-            <p class="hour"></p>
-        </section>
-        <section id="more-details">
-            <h2>Detalhes</h2>
-            <section id="section-feels-like">
-                <h3>Sensação termica</h3>
-                <img src="" alt="">
-                <p id="feels-like-value">0</p>
+                <h1 class="name-city">CityName</h1>
+                <p class="hour">21:00</p>
             </section>
-            <section id="section-humidity">
-                <h3>Umidade</h3>
-                <img src="" alt="">
-                <p id="humidity-value">0</p>
-            </section>
-            <section id="section-wind">
-                <h3>Velocidade do Vento</h3>
-                <img src="" alt="">
-                <p id="wind-value">0</p>
-            </section>
-        </section>
-        <section id="forecast-weak">
-            <h2>Previsão para os proximos dias</h2>
-            <ul id="list-forecast-weak">
-                <li class="forecast-day">
-                    <span class="day-weak">Domingo</span>
-                    <img src="" alt="" class="icon">
-                    <div>
-                        <span class="min"></span>
-                        <progress value=".3"></progress>
-                        <span class="max"></span>
+            <div class="col-2">
+                <section id="more-details">
+                    <h2>Mais informações</h2>
+                    <div class="grid">
+                        <section id="section-feels-like">
+                            <h3>Sensação termica</h3>
+                            <img src="" alt="">
+                            <p id="feels-like-value">00°</p>
+                        </section>
+                        <section id="section-humidity">
+                            <h3>Umidade</h3>
+                            <img src="" alt="">
+                            <p id="humidity-value">00%</p>
+                        </section>
+                        <section id="section-wind">
+                            <h3>Velocidade do Vento</h3>
+                            <img src="" alt="">
+                            <p id="wind-value">00Km/h</p>
+                        </section>
                     </div>
-                </li>
-                <li class="forecast-day">
-                    <span class="day-weak">Segunda</span>
-                    <img src="" alt="" class="icon">
-                    <div>
-                        <span class="min"></span>
-                        <progress value=".3"></progress>
-                        <span class="max"></span>
-                    </div>
-                </li><li class="forecast-day">
-                    <span class="day-weak">Terça</span>
-                    <img src="" alt="" class="icon">
-                    <div>
-                        <span class="min"></span>
-                        <progress value=".3"></progress>
-                        <span class="max"></span>
-                    </div>
-                </li><li class="forecast-day">
-                    <span class="day-weak">Quarta</span>
-                    <img src="" alt="" class="icon">
-                    <div>
-                        <span class="min"></span>
-                        <progress value=".3"></progress>
-                        <span class="max"></span>
-                    </div>
-                </li>
-                <li class="forecast-day">
-                    <span class="day-weak">Quinta</span>
-                    <img src="" alt="" class="icon">
-                    <div>
-                        <span class="min"></span>
-                        <progress value=".3"></progress>
-                        <span class="max"></span>
-                    </div>
-                </li>
-                <li class="forecast-day">
-                    <span class="day-weak">Sexta</span>
-                    <img src="" alt="" class="icon">
-                    <div>
-                        <span class="min"></span>
-                        <progress value=".3"></progress>
-                        <span class="max"></span>
-                    </div>
-                </li>
-                <li class="forecast-day">
-                    <span class="day-weak">Sabado</span>
-                    <img src="" alt="" class="icon">
-                    <div>
-                        <span class="min"></span>
-                        <progress value=".3"></progress>
-                        <span class="max"></span>
-                    </div>
-                </li>
-            </ul>
-        </section>
+                </section>
+                <section id="forecast-weak">
+                    <h2>Previsão para os proximos dias</h2>
+                    <ul id="list-forecast-weak">
+                        <li class="forecast-day">
+                            <span class="day-weak">Domingo</span>
+                            <div class="container-img">
+                                <img src="./assets/img/storm.png" alt="" class="icon">
+                            </div>
+                            <div>
+                                <span class="max">10°</span>
+                                <progress value=".5"></progress>
+                                <span class="min">30°</span>
+                            </div>
+                        </li>
+                        <li class="forecast-day">
+                            <span class="day-weak">Segunda</span>
+                            <div class="container-img">
+                                <img src="./assets/img/storm.png" alt="" class="icon">
+                            </div>
+                            <div>
+                                <span class="max">10°</span>
+                                <progress value=".5"></progress>
+                                <span class="min">30°</span>
+                            </div>
+                        </li>
+                        <li class="forecast-day">
+                            <span class="day-weak">Terça</span>
+                            <div class="container-img">
+                                <img src="./assets/img/storm.png" alt="" class="icon">
+                            </div>
+                            <div>
+                                <span class="max">10°</span>
+                                <progress value=".5"></progress>
+                                <span class="min">30°</span>
+                            </div>
+                        </li>
+                        <li class="forecast-day">
+                            <span class="day-weak">Quarta</span>
+                            <div class="container-img">
+                                <img src="./assets/img/storm.png" alt="" class="icon">
+                            </div>
+                            <div>
+                                <span class="max">10°</span>
+                                <progress value=".5"></progress>
+                                <span class="min">30°</span>
+                            </div>
+                        </li>
+                        <li class="forecast-day">
+                            <span class="day-weak">Quinta</span>
+                            <div class="container-img">
+                                <img src="./assets/img/storm.png" alt="" class="icon">
+                            </div>
+                            <div>
+                                <span class="max">10°</span>
+                                <progress value=".5"></progress>
+                                <span class="min">30°</span>
+                            </div>
+                        </li>
+                        <li class="forecast-day">
+                            <span class="day-weak">Sexta</span>
+                            <div class="container-img">
+                                <img src="./assets/img/storm.png" alt="" class="icon">
+                            </div>
+                            <div>
+                                <span class="max">10°</span>
+                                <progress value=".5"></progress>
+                                <span class="min">30°</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>    
+        </div> 
     </main>
     <script src="./assets/js/apiCall.js"></script>  
 </body>
