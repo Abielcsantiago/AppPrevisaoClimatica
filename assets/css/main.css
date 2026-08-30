@@ -1,0 +1,142 @@
+main{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-content:center;
+}
+main .col-1{
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
+}
+form{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin:10px 0 0 20px;
+}
+#input-city{
+    border:1px solid hsl(0, 1%, 21%);
+    border-radius:10px;
+    display:inline-block;
+    padding:5px 15px;
+    font-family: 'Poppins';
+    font-size:0.8rem;
+    background-color:#fff;
+    font-weight:500;
+    color:#000;
+}
+form button{
+    max-width:30px;
+    border:1px solid gray;
+    border-radius:10px;
+    background-color:#fff;
+    padding:5px;
+    cursor:pointer;
+    transition-duration:0.1s;
+}
+form button:hover{
+    padding:7px
+}
+form img{
+    display:block;
+}
+h1{
+    font-size:2.7rem;
+}
+#temp-today{
+    font-size:4rem;
+    font-weight:bold;
+}
+#city-name{
+    text-transform:capitalize;
+}
+#hour{
+    font-size:1.2rem;
+    font-weight:500;
+}
+.grid-temp-icon{
+    display:flex;
+    align-items:flex-end;
+}
+.grid-temp-icon .icon-container{
+    max-width:60px;
+}
+main .col-2{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    justify-content: space-between;
+}
+#container-details, #container-forecast{
+    background-color:#1111118c;
+    padding:20px;
+    border-radius:30px;
+}
+#container-details h2{
+    margin-bottom:30px;
+}
+#container-details .grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+}
+#container-details section{
+    padding:10px;
+    background-color:#c7c7c70c;
+    border-radius:15px;
+    min-height:110px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border:1px solid rgb(153, 151, 151);
+}
+#container-forecast{
+
+}
+#container-forecast .icon-container{
+    max-width:40px;
+}
+#list-forecast{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+.forecast-day{
+    display:grid;
+    gap:20px;
+    align-items:center;
+    grid-template-columns: 0.3fr 1fr;
+    justify-content: stretch;
+    justify-items: stretch;
+}
+.day-weak{
+    width:80px;
+}
+.forecast-day .col-1{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.container-progress-bar{
+    display:grid;
+    gap:10px;
+    align-items:center;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr auto;
+}
+.progress-bar{
+    display:flex;
+    height:10px;
+    background-color:#9a9c9cc5;
+    border-radius:15px;
+    align-items:center;
+}
+.progress-bar .progress{
+    background-color:#ededf0;
+    display:inline-block;
+    width:30px;
+    height:100%;
+    margin-left:calc(70% - 30px);
+    border-radius:10px;
+}
