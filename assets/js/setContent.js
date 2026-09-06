@@ -8,29 +8,6 @@ function getHour(){
     if(minutes < 10) minutes = "0" + minutes;
     clock.innerText = `${hours}:${minutes}`;
 }
-function setIcon(clima, element){
-    let icon = "";
-    switch(clima){
-        case("Clouds"):
-            icon = "iconCloud.png"; 
-            break
-        case("Clear"):
-            icon = "iconClear.png";
-            break
-        case("Thunderstorm"):
-        case("Drizzle"):
-            icon = "iconStorm.png";
-            break
-        case("Rain"):
-            icon = "iconRain.png";
-            break
-        default:
-            icon = "iconClear.png"; 
-            break   
-        } 
-        const cssDeclaration = `./assets/img/${icon}`;
-        element.setAttribute("src", cssDeclaration)  
-}
 function setWallpaperAndIcon(code, iconElement){
     let wallpaper = "";
     let icon = "";
