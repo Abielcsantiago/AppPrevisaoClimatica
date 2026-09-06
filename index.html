@@ -24,124 +24,125 @@
                     </div>
                 </div>
                 <h1 id="city-name">Camaçari</h1>
-                <p id="hour">21:00</p>
+                <p id="clock">21:00</p>
             </section>
         </div>
         <div class="col-2">
             <section id="container-details">
-                <h2>Mais informações</h2>
+                <h2>More Details</h2>
                 <div class="grid">
                     <section id="section-feels-like">
-                        <h3>Sensação termica</h3>
-                        <p><span id="feels-like-value"></span>°</p>
+                        <h3>Feels Like</h3>
+                        <p><span id="feels-like-value"></span></p>
                     </section>
                     <section id="section-humidity">
-                        <h3>Umidade</h3>
+                        <h3>Humidity</h3>
                         <p><span id="humidity-value"></span></p>
                     </section>
                     <section id="section-wind">
-                        <h3>Vento</h3>
-                        <p><span id="wind-value"></span> Km/h</p>
+                        <h3>Wind</h3>
+                        <p><span id="wind-value"></span></p>
                     </section>
                 </div>
             </section>
             <section id="container-forecast">
-                <h2>Previsão para os proximos dias</h2>
+                <h2>Forecast for the coming days</h2>
                 <ul id="list-forecast">
                     <li class="forecast-day">
                         <div class="col-1">
-                            <span class="day-weak">Domingo</span>
+                            <span class="day-weak">Sunday</span>
                             <div class="icon-container">
-                                <img src="./assets/img/storm.png" alt="" class="icon">
+                                <img src="./assets/img/iconStorm.png" alt="" class="icon">
                             </div>
                         </div>
                         <div class="container-progress-bar">
-                            <span class="max">10°</span>
+                            <span class="min">10°</span>
                             <div class="progress-bar">
                                 <span class="progress"></span>
                             </div>
-                            <span class="min">30°</span>
+                            <span class="max">30°</span>
                         </div>
                     </li>
                     <li class="forecast-day">
                         <div class="col-1">
-                            <span class="day-weak">Segunda</span>
+                            <span class="day-weak">Monday</span>
                             <div class="icon-container">
-                                <img src="./assets/img/storm.png" alt="" class="icon">
+                                <img src="./assets/img/iconStorm.png" alt="" class="icon">
                             </div>
                         </div>
                         <div class="container-progress-bar">
-                            <span class="max">10°</span>
+                            <span class="min">10°</span>
                             <div class="progress-bar">
                                 <span class="progress"></span>
                             </div>
-                            <span class="min">30°</span>
+                            <span class="max">30°</span>
                         </div>
                     </li>
                     <li class="forecast-day">
                         <div class="col-1">
-                            <span class="day-weak">Terça</span>
+                            <span class="day-weak">Tuesday</span>
                             <div class="icon-container">
-                                <img src="./assets/img/storm.png" alt="" class="icon">
+                                <img src="./assets/img/iconCloud.png" alt="" class="icon">
                             </div>
                         </div>
                         <div class="container-progress-bar">
-                            <span class="max">10°</span>
+                            <span class="min">10°</span>
                             <div class="progress-bar">
                                 <span class="progress"></span>
                             </div>
-                            <span class="min">30°</span>
+                            <span class="max">30°</span>
                         </div>
                     </li>
                     <li class="forecast-day">
                         <div class="col-1">
-                            <span class="day-weak">Quarta</span>
+                            <span class="day-weak">Wednesday</span>
                             <div class="icon-container">
-                                <img src="./assets/img/storm.png" alt="" class="icon">
+                                <img src="./assets/img/iconClear.png" alt="" class="icon">
                             </div>
                         </div>
                         <div class="container-progress-bar">
-                            <span class="max">10°</span>
+                            <span class="min">10°</span>
                             <div class="progress-bar">
                                 <span class="progress"></span>
                             </div>
-                            <span class="min">30°</span>
+                            <span class="max">30°</span>
                         </div>
                     </li>
                     <li class="forecast-day">
                         <div class="col-1">
-                            <span class="day-weak">Quinta</span>
+                            <span class="day-weak">Thursday</span>
                             <div class="icon-container">
-                                <img src="./assets/img/storm.png" alt="" class="icon">
+                                <img src="./assets/img/iconRain.png" alt="" class="icon">
                             </div>
                         </div>
                         <div class="container-progress-bar">
-                            <span class="max">10°</span>
+                            <span class="min">10°</span>
                             <div class="progress-bar">
                                 <span class="progress"></span>
                             </div>
-                            <span class="min">30°</span>
+                            <span class="max">30°</span>
                         </div>
                     </li>
                     <li class="forecast-day">
                         <div class="col-1">
-                            <span class="day-weak">Sexta</span>
+                            <span class="day-weak">Friday</span>
                             <div class="icon-container">
-                                <img src="./assets/img/storm.png" alt="" class="icon">
+                                <img src="./assets/img/iconStorm.png" alt="" class="icon">
                             </div>
                         </div>
                         <div class="container-progress-bar">
-                            <span class="max">10°</span>
+                            <span class="min">10°</span>
                             <div class="progress-bar">
                                 <span class="progress"></span>
                             </div>
-                            <span class="min">30°</span>
+                            <span class="max">30°</span>
                         </div>
                     </li>
                 </ul>
             </section>
         </div>
     </main>
-    <script src="./assets/js/apiCall.js"></script>  
+    <script type="module" src="./assets/js/apiCall.js"></script>
+    <script type="module" src="./assets/js/setContent.js"></script>
 </body>
 </html>
