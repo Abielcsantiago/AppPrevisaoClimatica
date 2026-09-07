@@ -129,10 +129,9 @@ main .col-2{
     gap:10px;
     align-items:center;
     grid-auto-flow: column;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 40px 1fr 40px;
 }
 .container-progress-bar .min, .container-progress-bar .max{
-    width:40px;
     text-align:center;
 }
 .progress-bar{
