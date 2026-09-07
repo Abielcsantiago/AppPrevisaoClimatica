@@ -17,7 +17,7 @@ function setWallpaperAndIcon(code, iconElement){
     const lightRain = [51,53,56,61,63,66,80,81];
     const heavyRain = [55,57,65,67,82,95,96,99];
     const snow = [71,73,75,77,85,86];
-    if(hour < 18){
+    if(hour < 18 && hour >= 5 ){
         if(clear.includes(code)){
             wallpaper = "sunWallpaper.jpg"; 
             icon = "iconClear.png";
