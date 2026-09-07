@@ -11,27 +11,46 @@ function getHour(){
 function setWallpaperAndIcon(code, iconElement){
     let wallpaper = "";
     let icon = "";
+    const hour = new Date().getHours();
     const clear = [0,1];
     const cloudy = [2,3,45,48];
     const lightRain = [51,53,56,61,63,66,80,81];
     const heavyRain = [55,57,65,67,82,95,96,99];
     const snow = [71,73,75,77,85,86];
-    console.log(code)
-    if(clear.includes(code)){
-        wallpaper = "sunWallpaper.jpg"; 
-        icon = "iconClear.png";
-    }else if(cloudy.includes(code)){
-        wallpaper = "lightCloudWallpaper.jpg";
-        icon = "iconCloud.png";      
-    }else if(lightRain.includes(code)){
-        wallpaper = "rainWallpaper.jpg";
-        icon = "iconRain.png"; 
-    }else if(heavyRain.includes(code)){
-        wallpaper = "cloudyWallpaper.jpg";
-        icon = "iconStorm.png";     
+    if(hour < 18){
+        if(clear.includes(code)){
+            wallpaper = "sunWallpaper.jpg"; 
+            icon = "iconClear.png";
+        }else if(cloudy.includes(code)){
+            wallpaper = "lightCloudWallpaper.jpg";
+            icon = "iconCloud.png";      
+        }else if(lightRain.includes(code)){
+            wallpaper = "rainWallpaper.jpg";
+            icon = "iconRain.png"; 
+        }else if(heavyRain.includes(code)){
+            wallpaper = "cloudyWallpaper.jpg";
+            icon = "iconStorm.png";     
+        }else{
+            wallpaper = "snowWallpaper.jpg"; 
+            icon = "iconSnow.png";    
+        }    
     }else{
-        wallpaper = "snowWallpaper.jpg"; 
-        icon = "iconSnow.png";    
+        if(clear.includes(code)){
+            wallpaper = "clearNightWallpaper.jpg"; 
+            icon = "moonIcon.png";
+        }else if(cloudy.includes(code)){
+            wallpaper = "clearNightWallpaper.jpg";
+            icon = "moonCloudIcon.png";      
+        }else if(lightRain.includes(code)){
+            wallpaper = "rainNightWallpaper.jpg";
+            icon = "moonRainIcon.png"; 
+        }else if(heavyRain.includes(code)){
+            wallpaper = "rainNightWallpaper.jpg";
+            icon = "moonStormIcon.png";     
+        }else{
+            wallpaper = "clearNightWallpaper.jpg"; 
+            icon = "moonIcon.png";    
+        } 
     }
     iconElement.setAttribute("src", `./assets/img/${icon}`);
     document.body.style.backgroundImage = `url("./assets/img/${wallpaper}")`;

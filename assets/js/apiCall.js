@@ -36,15 +36,19 @@ async function geoApi(cidade){
     };
 }
 async function getWeather(e){
-    if(e) e.preventDefault();    
-    const city = document.querySelector("#input-city").value;
-    const latLon = await geoApi(city);
-    const weather = await weathearApi(latLon.lat, latLon.lon);
-    const current = weather.current;
-    const forecast = weather.forecast;
-    setCurrentWeather(current.temp, current.feelsLike, current.humidity, current.windSpeed, current.code, city);
-    console.log(forecast)
-    setWeatherForecast(forecast.tempMax, forecast.tempMin, forecast.tempMean, forecast.date, forecast.code);
+    if(e) e.preventDefault(); 
+    try{
+        const city = document.querySelector("#input-city").value;
+        const latLon = await geoApi(city);
+        const weather = await weathearApi(latLon.lat, latLon.lon);
+        const current = weather.current;
+        const forecast = weather.forecast;
+        setCurrentWeather(current.temp, current.feelsLike, current.humidity, current.windSpeed, current.code, city);
+        console.log(forecast)
+        setWeatherForecast(forecast.tempMax, forecast.tempMin, forecast.tempMean, forecast.date, forecast.code);
+    }catch(error){
+        alert("Cidade não encontrada. Tente novamente.")
+    }
 }
 document.querySelector("#input-city").value = "Camaçari";
 getWeather();

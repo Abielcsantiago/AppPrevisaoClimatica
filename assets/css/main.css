@@ -16,7 +16,7 @@ form{
     margin:10px 0 0 20px;
 }
 #input-city{
-    border:1px solid hsl(0, 1%, 21%);
+    border:1px solid #363535;
     border-radius:10px;
     display:inline-block;
     padding:5px 15px;
@@ -63,7 +63,8 @@ h1, #temp-today, #clock{
     align-items:flex-end;
 }
 .grid-temp-icon .icon-container{
-    max-width:60px;
+    width:45px;
+    margin-bottom:15px;
 }
 main .col-2{
     display:flex;
