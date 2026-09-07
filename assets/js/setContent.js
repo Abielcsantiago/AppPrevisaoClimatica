@@ -16,6 +16,7 @@ function setWallpaperAndIcon(code, iconElement){
     const lightRain = [51,53,56,61,63,66,80,81];
     const heavyRain = [55,57,65,67,82,95,96,99];
     const snow = [71,73,75,77,85,86];
+    console.log(code)
     if(clear.includes(code)){
         wallpaper = "sunWallpaper.jpg"; 
         icon = "iconClear.png";
@@ -52,7 +53,6 @@ function setCurrentWeather(temp, feelsLike, humidity, windSpeed, code, city){
 function setWeatherForecast(max, min, mean, date, code){
     const listForecast = document.querySelectorAll(".forecast-day");
     listForecast.forEach(setForecastContent)
-    
     function setForecastContent(listItem, i, array){
         const dayWeak = listItem.querySelector(".day-weak");
         const iconElement = listItem.querySelector(".icon");
@@ -62,8 +62,13 @@ function setWeatherForecast(max, min, mean, date, code){
         dayWeak.innerText = getDayWeak(date[i]);
         maxValue.innerText = max[i].toFixed(1) + "°";
         minValue.innerText = min[i].toFixed(1) + "°";
-        const percentProgress = (mean[i] / max[i]) * 100;
-        progress.style.marginLeft = `calc(${percentProgress}% - 30px)`;
+        if(Math.abs(max[i]) < Math.abs(min[i])){
+            const percentProgress = (Math.abs(mean[i]) / Math.abs(min[i])) * 100;
+            progress.style.marginLeft = `calc(${percentProgress}% - 30px)`;
+        }else{
+            const percentProgress = (Math.abs(mean[i]) / Math.abs(max[i])) * 100;
+            progress.style.marginLeft = `calc(${percentProgress}% - 30px)`;  
+        }
         progress.setAttribute("title", mean[i].toFixed(1) + "°")
         progress.style.setProperty("--contentBefore", `"${mean[i].toFixed(1)}°"` )
         setIconForecast(iconElement, code[i])

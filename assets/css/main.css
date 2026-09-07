@@ -48,6 +48,9 @@ h1{
     font-size:4rem;
     font-weight:bold;
 }
+h1, #temp-today, #clock{
+    text-shadow:2px 2px 5px #000;
+}
 #city-name{
     text-transform:capitalize;
 }
