@@ -171,7 +171,6 @@ main .col-2{
     }
     
     main{
-        margin:60px 0;
         grid-template-columns: 1fr;
         gap:40px;
     }
