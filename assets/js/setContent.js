@@ -77,17 +77,13 @@ function setWeatherForecast(max, min, mean, date, code){
         const iconElement = listItem.querySelector(".icon");
         const maxValue = listItem.querySelector(".max");
         const minValue = listItem.querySelector(".min"); 
+        const progressBar = listItem.querySelector(".progress-bar")
         const progress = listItem.querySelector(".progress"); 
         dayWeak.innerText = getDayWeak(date[i]);
         maxValue.innerText = max[i].toFixed(1) + "°";
         minValue.innerText = min[i].toFixed(1) + "°";
-        if(Math.abs(max[i]) < Math.abs(min[i])){
-            const percentProgress = (Math.abs(mean[i]) / Math.abs(min[i])) * 100;
-            progress.style.marginLeft = `calc(${percentProgress}% - 30px)`;
-        }else{
-            const percentProgress = (Math.abs(mean[i]) / Math.abs(max[i])) * 100;
-            progress.style.marginLeft = `calc(${percentProgress}% - 30px)`;  
-        }
+        const percentProgress = ((mean[i] - min[i]) / (max[i] - min[i])) * 100;
+        progress.style.marginLeft = `calc(${percentProgress}% - 30px)`; 
         progress.setAttribute("title", mean[i].toFixed(1) + "°")
         progress.style.setProperty("--contentBefore", `"${mean[i].toFixed(1)}°"` )
         setIconForecast(iconElement, code[i])

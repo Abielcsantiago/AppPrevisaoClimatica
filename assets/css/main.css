@@ -131,6 +131,10 @@ main .col-2{
     grid-auto-flow: column;
     grid-template-columns: auto 1fr auto;
 }
+.container-progress-bar .min, .container-progress-bar .max{
+    width:40px;
+    text-align:center;
+}
 .progress-bar{
     display:flex;
     height:10px;
