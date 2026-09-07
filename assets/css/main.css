@@ -156,7 +156,7 @@ main .col-2{
     position:absolute;
     top:-18px;
 }
-@media(max-width:850px){
+@media(max-width:900px){
     h1{
         font-size:2rem;
         text-shadow:2px 2px 5px #000;
@@ -175,9 +175,14 @@ main .col-2{
         gap:40px;
     }
 }
-@media(max-width:460px){
+@media(max-width:620px){
     #container-details .grid{
         grid-template-columns: 1fr;
+    }
+    #container-details section{
+        flex-direction:row;
+        align-items: center;
+        padding:0 20px;
     }
     #container-forecast .icon-container{
         display:none;
